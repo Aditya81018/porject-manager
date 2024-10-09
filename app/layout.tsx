@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -35,7 +35,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="prose prose-invert dark:prose-neutral max-w-[100vw] h-screen w-screen flex flex-col bg-background">
+          <main className="prose dark:prose-invert max-w-[100vw] h-screen w-screen flex flex-col bg-background p-4">
             {children}
           </main>
         </ThemeProvider>
